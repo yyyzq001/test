@@ -7,28 +7,27 @@
 </template>
 
 <script>
-import VirtualList from './components/VirtualList.vue'
-import Item from './components/Item.vue'
+import VirtualList from '../../components/VirtualList.vue'
+import Item from '../../components/Item.vue'
 
-
-let data = [];
+let data = []
 for (let id = 0; id < 1000; id++) {
   data.push({
     id,
-    value: '123'// 长文本
+    value: '123', // 长文本
   })
 }
 
 export default {
-  data(){
+  data() {
     return {
-      data
-    };
+      data,
+    }
   },
   components: {
     VirtualList,
-    Item
-  }
+    Item,
+  },
   watch: {},
   props: {},
   mounted() {
